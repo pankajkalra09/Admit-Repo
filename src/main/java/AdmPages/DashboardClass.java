@@ -16,7 +16,7 @@ public class DashboardClass {
 	public WebDriver driver;
 	//public static Logger log = Logger.getLogger(DashboardClass.class.getName());
 	
-	//notes added
+	//notes added for testing
 	@FindBy(xpath = "//div[@id='addToggleMode']")	WebElement toggle;
 	@FindBy(xpath = "//*[@id=\"865960\"]/div/div[1]/button[1]/i")	WebElement DeleteWidget;
 	@FindBy(xpath = "//div[text() = 'Are you sure you want to delete this widget?']")	WebElement DeletePopUpConfirm;
