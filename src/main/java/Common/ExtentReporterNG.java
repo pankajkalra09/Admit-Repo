@@ -20,10 +20,10 @@ import com.relevantcodes.extentreports.LogStatus;
 
  
 public class ExtentReporterNG implements IReporter {
-    private ExtentReports extent;
+    private ExtentReporterNG extent;
  
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
-        extent = new ExtentReports(outputDirectory + File.separator + "ExtentReportsTestNG.html", true);
+        extent = new ExtentReporterNG(outputDirectory + File.separator + "ExtentReportsTestNG.html", true);
         for (ISuite suite : suites) {
             Map<String, ISuiteResult> result = suite.getResults();
             for (ISuiteResult r : result.values()) {

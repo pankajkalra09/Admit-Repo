@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import Common.BaseClass;
 import Common.DataProviderClass;
 import SelfService.Pages.ApplicantInfoPage;
+import SelfService.Pages.DashboardSS;
 import SelfService.Pages.EmailRegisterPage;
 import SelfService.Pages.ProspectInfoPage;
 
@@ -40,11 +41,17 @@ public class SelfService_Flow extends BaseClass {
 		obj1.clickdrop(Calendartype, termapplying, award, primarymajor, secondarymajor, firstname, middlename, lastname,
 				suffix, preferedname, legalname);
 	}
+	
+	@Test(priority = 3, enabled = true)
+	public void SSDashboard() throws Exception {
+		DashboardSS obj2 = new DashboardSS(driver);
+		obj2.apply();
+	}
 
-	@Test(priority = 3, enabled = true, dataProvider = "selfservice_ApplicantPage", dataProviderClass = DataProviderClass.class)
+	@Test(priority = 4, enabled = true, dataProvider = "selfservice_ApplicantPage", dataProviderClass = DataProviderClass.class)
 	public void TApplicant_Form_method(String fullparttime, String admitcode, String campuscode, String resdencycode, String primarysource) throws Exception {
-		ApplicantInfoPage obj2 = new ApplicantInfoPage(driver);
-		obj2.applicantdata(fullparttime, admitcode, campuscode, resdencycode, primarysource);
+		ApplicantInfoPage obj3 = new ApplicantInfoPage(driver);
+		obj3.applicantdata(fullparttime, admitcode, resdencycode, primarysource);
 	}
 
 	

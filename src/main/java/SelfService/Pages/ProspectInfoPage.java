@@ -49,7 +49,7 @@ public WebDriver driver;
 		Assert.assertEquals(pagetitle1, "Oklahoma Wesleyan University");
 	}
 	
-	public ApplicantInfoPage clickdrop(String CalType, String Term, String Awardname, String PMajor, String SMajor, String FName, String MName, String LName, String Suff, String PreName, String LegName) throws InterruptedException {
+	public DashboardSS clickdrop(String CalType, String Term, String Awardname, String PMajor, String SMajor, String FName, String MName, String LName, String Suff, String PreName, String LegName) throws InterruptedException {
 		CalendarType.click();
 		Thread.sleep(2000);
 		CTsearchfield.sendKeys(CalType);
@@ -99,7 +99,7 @@ public WebDriver driver;
 		continuebutton.click();
 		Thread.sleep(10000);
 		//System.out.println("Continue button pressed");
-		return new ApplicantInfoPage(driver);
+		return new DashboardSS(driver);
 		
 	}
 	

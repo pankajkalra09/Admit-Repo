@@ -16,13 +16,13 @@ public class BaseClass {
 	public WebDriver initilizeBrowser() throws Exception {
 
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Pankaj_Kalra\\eclipse-workspace_selfService\\Self_Service\\src\\main\\java\\Data\\data.properties");
+		FileInputStream fis = new FileInputStream("C:\\Users\\acer\\git\\Admit-Repo\\src\\main\\java\\Data\\data.properties");
 		prop.load(fis);
 
 		String browsername = prop.getProperty("browser");
 
 		if (browsername.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Pankaj_Kalra\\eclipse-workspace_selfService\\Self_Service\\src\\main\\java\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\acer\\git\\Admit-Repo\\src\\main\\java\\Drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browsername.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();

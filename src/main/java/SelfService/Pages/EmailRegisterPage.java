@@ -22,7 +22,7 @@ public class EmailRegisterPage {
 
 	public void verifyPageTitle() {
 		String pagetitle = driver.getTitle();
-		Assert.assertEquals(pagetitle, "Oklahoma Wesleyan University");
+		Assert.assertEquals(pagetitle, "Oklahama wesleyan university");
 	}
 
 	public ProspectInfoPage enterEmailId(String email) throws Exception {
